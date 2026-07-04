@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --canvas: #f6f6fa;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #15131f;
+  background: var(--canvas);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* visible, accessible focus ring app-wide */
+:focus-visible {
+  outline: 2px solid #4f3dff;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.chip-scroll::-webkit-scrollbar {
+  display: none;
+}
+.chip-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
