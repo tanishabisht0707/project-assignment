@@ -96,25 +96,21 @@ export function TemplateCard({
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
 
-              {/* Shine */}
               <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-1000 group-hover:translate-x-full" />
             </div>
           </div>
 
-          {/* Featured */}
           {template.featured && (
             <span className="absolute left-5 top-5 z-20 rounded-full border border-white/10 bg-white/5 px-4 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white backdrop-blur-xl">
               Featured
             </span>
           )}
 
-          {/* Difficulty */}
           <span className="absolute right-5 top-5 rounded-full border border-white/10 bg-black/40 px-3 py-1 text-[10px] uppercase text-white/60 backdrop-blur-xl">
             {template.difficulty}
           </span>
         </button>
 
-        {/* Content */}
         <div className="relative z-10 space-y-5 px-5 pb-5 pt-12">
           <div>
             <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-violet-300/70">
@@ -142,14 +138,12 @@ export function TemplateCard({
             ))}
           </div>
 
-          {/* Footer */}
           <div className="flex items-center justify-between border-t border-white/10 pt-4">
             <span className="font-mono text-sm text-white/40">
               {formatDeployCount(template.deploys)} DEPLOYS
             </span>
 
             <div className="flex gap-2">
-              {/* Bookmark */}
               <button
                 onClick={handleBookmark}
                 className="rounded-xl p-2 text-white/30 transition-all hover:bg-white/5 hover:text-white"
@@ -160,7 +154,6 @@ export function TemplateCard({
                 />
               </button>
 
-              {/* Copy */}
               <button
                 onClick={handleCopy}
                 className="rounded-xl p-2 text-white/30 transition-all hover:bg-white/5 hover:text-white"

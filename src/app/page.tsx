@@ -29,13 +29,11 @@ export default function Home() {
   const [isInitialLoading, setIsInitialLoading] = useState(true);
   const searchInputRef = useRef<HTMLInputElement>(null);
 
-  // Simulates the initial fetch — this is what would gate a real API call.
   useEffect(() => {
     const t = setTimeout(() => setIsInitialLoading(false), 500);
     return () => clearTimeout(t);
   }, []);
 
-  // Cmd/Ctrl+K focuses search, matching the navbar's ⌘K affordance.
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {

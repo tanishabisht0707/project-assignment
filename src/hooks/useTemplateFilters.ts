@@ -8,8 +8,6 @@ export function useTemplateFilters(templates: Template[]) {
   const [searchTerm, setSearchTerm] = useState("");
   const [activeCategory, setActiveCategory] = useState<string>("All");
 
-  // Debounce only the expensive filter pass — the input itself stays
-  // instant/controlled so typing never feels laggy.
   const debouncedSearchTerm = useDebouncedValue(searchTerm, 350);
   const isSearchPending = searchTerm !== debouncedSearchTerm;
 

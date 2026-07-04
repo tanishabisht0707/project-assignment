@@ -1,8 +1,7 @@
 import { templates } from "@/data/templates";
 import { notFound } from "next/navigation";
 import { Github, ExternalLink, Box, LayoutGrid, Zap, Award, Tag } from "lucide-react";
-import type { Template } from "@/types/template"; // Assuming your types are exported from here
-
+import type { Template } from "@/types/template"; 
 interface Props {
   params: { slug: string };
 }
@@ -16,7 +15,6 @@ export default function TemplateDetails({ params }: Props) {
     <main className="min-h-screen bg-neutral-50 dark:bg-[#0a0a0a] text-neutral-900 dark:text-neutral-100 transition-colors duration-500">
       <div className="max-w-6xl mx-auto px-6 py-16">
         
-        {/* Header Section */}
         <header className="mb-12">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div>
@@ -40,12 +38,10 @@ export default function TemplateDetails({ params }: Props) {
           </div>
         </header>
 
-        {/* Hero Image */}
         <div className="relative rounded-3xl overflow-hidden border border-neutral-200 dark:border-neutral-800 shadow-2xl mb-16">
           <img src={template.heroImage} alt={template.title} className="w-full h-[500px] object-contain rounded-md" />
         </div>
 
-        {/* Main Grid */}
         <div className="grid lg:grid-cols-[1fr,360px] gap-12">
           
           <section className="space-y-16">
@@ -67,7 +63,6 @@ export default function TemplateDetails({ params }: Props) {
             </article>
           </section>
 
-          {/* Sidebar */}
           <aside className="space-y-8">
             <div className="p-8 rounded-3xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 shadow-sm">
               <h3 className="font-bold text-lg mb-6">Metadata</h3>
